@@ -19,8 +19,8 @@ class RemindersFragment : Fragment() {
     private val reminderAdapter = ReminderAdapter(reminders)
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_reminders, container, false)
@@ -37,7 +37,12 @@ class RemindersFragment : Fragment() {
         rvReminders.layoutManager =
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         rvReminders.adapter = reminderAdapter
-        rvReminders.addItemDecoration(DividerItemDecoration(context,DividerItemDecoration.VERTICAL))
+        rvReminders.addItemDecoration(
+            DividerItemDecoration(
+                context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
     }
 
 }
